@@ -4,8 +4,8 @@ class Konyv:
     def __init__(self,konyv_cim,konyv_ar = 500):
         self.ar = konyv_ar
         self.cim = konyv_cim
-    def kiir(self):
-        print(f"A könyv címe: {self.cim} és ára: {self.ar}")
+    def __str__(self):
+        return f"A könyv címe: {self.cim} és ára: {self.ar}"
     def aratNovel(self,ertek):
         self.ar += ertek;
 
@@ -19,6 +19,6 @@ print(other_konyv.cim)
 
 print(my_konyv.lokacio)
 
-my_konyv.kiir()
-
 my_konyv.aratNovel(20)
+
+print(my_konyv)
